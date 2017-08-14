@@ -2,7 +2,8 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-def send_notification(fromaddr, password, toaddr,
+def send_notification(toaddr,
+        password, fromaddr='bebi103.notifications@gmail.com',
         subject='Message from your Amazon EC2 server',
         body='Your calculation has finished, \nCheers from the Cloud!',
         host='smtp.gmail.com', port=587):
