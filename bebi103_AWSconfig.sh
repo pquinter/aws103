@@ -30,8 +30,9 @@ conda install -y matplotlib seaborn bokeh holoviews jupyter datashader
 
 # install bebi103_utils
 pip install bebi103
-# Needed for bebi103_utils to work
+# for bebi103_utils
 sudo yum -y install mesa-libGL.x86_64
+sudo yum install gcc-c++ #for Theano compiled code
 
 # Generate jupyter configuration file and certificate
 jupyter notebook --generate-config
