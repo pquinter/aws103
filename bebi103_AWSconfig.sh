@@ -31,8 +31,7 @@ conda install -y matplotlib seaborn bokeh holoviews jupyter datashader
 # install bebi103_utils
 pip install bebi103
 # for bebi103_utils
-sudo yum -y install mesa-libGL.x86_64
-sudo yum install gcc-c++ #for Theano compiled code
+sudo yum -y install mesa-libGL.x86_64 gcc-c++
 
 # Generate jupyter configuration file and certificate
 jupyter notebook --generate-config
@@ -47,6 +46,8 @@ python ~/aws103/jupyter_passconfig.py
 # Download datasets
 echo 'Downloading the bebi103 datasets...'
 cd ~/*bebi103
-mkdir ./data
-cd ./data
-# wget?
+wget https://s3.amazonaws.com/bebi103.caltech.edu/2017/data/data.tar
+tar -xvf data.tar
+rm ./data.tar
+# Done!
+echo 'All set!'
